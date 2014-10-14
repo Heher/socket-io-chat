@@ -22,8 +22,9 @@ io.on('connection', function(socket){
 		socket.broadcast.emit("update", username + " has joined the server.");
 		// socket.sockets.emit("update-people", people);
 	});
-	socket.on('disconnect', function() {
-		socket.broadcast.emit('user disconnect');
+	socket.on('disconnect', function(username) {
+		socket.broadcast.emit("update", people[socket.id] + " has left the server.");
+		delete people[socket.id];
 	});
 });
 

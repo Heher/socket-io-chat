@@ -15,9 +15,3 @@ socket.on('chat message', function(msg){
 socket.on("update", function(msg) {
 	$('#messages').append($('<li>').text(msg));
 });
-socket.on('user co', function(username){
-	$('#messages').append($('<li>').text(username + " Connected"));
-});
-socket.on('user disconnect', function(){
-	$('#messages').append($('<li>').text("User Disconnected"));
-});
