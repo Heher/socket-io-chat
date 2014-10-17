@@ -1,14 +1,24 @@
 var gulp = require('gulp');
 
 var express = require('express');
+var path = require('path');
 var app = express();
+var router = express.Router();
 
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var people = {};
 
 gulp.task('express', function() {
+	app.set('views', __dirname + '/views');
+	app.set('view engine', 'jade');
+	app.use(router);
 	app.use(express.static(__dirname));
+
+	router.get('/', function (req, res) {  
+	  res.render('index');
+	});
+
 	server.listen(4000);
 });
 
@@ -31,9 +41,9 @@ gulp.task('socket', function() {
 });
 
 var sass = require('gulp-ruby-sass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	minifycss = require('gulp-minify-css'),
-	rename = require('gulp-rename');
+		autoprefixer = require('gulp-autoprefixer'),
+		minifycss = require('gulp-minify-css'),
+		rename = require('gulp-rename');
 
 gulp.task('styles', function() {
 	return gulp.src('sass/*.sass')
