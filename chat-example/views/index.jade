@@ -6,13 +6,15 @@ html
   script(src='/socket.io/socket.io.js')
   script(src='http://code.jquery.com/jquery-1.11.1.js')
   body
-    ul(id='users')
-    ul(id='messages')
-    form(id='username-form' action='')
-      p Choose a username
-      input(id='username' autocomplete='off')
-      button Send
-    form(id='chat-form' action='')
-      input(id='m' autocomplete='off')
-      button Send
+    .container
+      .main-content
+        ul(id='users')
+        ul(id='messages')
+      form(id='username-form' action='')
+        p Choose a username
+        input(id='username' autocomplete='off')
+        button Send
+      form(id='chat-form' action='')
+        input(id='m' autocomplete='off')
+        button Send
   script(src='/js/socket.js')

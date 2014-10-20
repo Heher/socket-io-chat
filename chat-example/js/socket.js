@@ -19,3 +19,10 @@ socket.on('chat', function(user, msg){
 socket.on("update", function(msg) {
 	$('#messages').append($('<li>').text(msg));
 });
+
+socket.on("update-users", function(people){
+	$("#users").empty();
+	$.each(people, function(clientid, name) {
+		$('#users').append(name);
+	});
+});
