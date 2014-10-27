@@ -5,7 +5,7 @@
 
 body 
 	font: 13px Helvetica, Arial
-	background: skyblue
+	background: url('/img/background.png')
 	div.container
 		position: absolute
 		top: 50%
@@ -14,7 +14,7 @@ body
 		height: 600px
 		margin-top: -300px
 		margin-left: -400px
-		border: 5px solid #000
+		border: 5px solid #CCC
 		border-radius: 5px
 
 div.main-content
@@ -24,7 +24,7 @@ div.main-content
 	display: -webkit-flex
 	display: flex
 
-	height: 93.220339%
+	height: 550px
 
 form#chat-form 
 	display: -webkit-box
@@ -32,7 +32,7 @@ form#chat-form
 	display: -ms-flexbox
 	display: -webkit-flex
 	display: flex
-	height: 6.779661%
+	height: 40px
 	
 	input
 		display: block
@@ -59,17 +59,23 @@ form#chat-form
 	background: #FFF
 	li
 		padding: 5px 10px
-		&:nth-child(odd)
-			background: #eee
+		&.system
+			background: #C1F0F6
 
 #users
 	// width: 20%
 	// height: 100%
 	flex: 1 1
 	background: lightgrey
+	li
+		list-style-type: none
+		text-align: center
+		padding: 10px 0
+		&:nth-child(odd)
+			background: #eee
+
 
 #username-form
-	display: none
 	background: #CCC
 	padding: 20px
 	width: 210px

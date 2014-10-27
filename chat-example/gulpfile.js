@@ -42,9 +42,9 @@ gulp.task('socket', function() {
 });
 
 var sass = require('gulp-ruby-sass'),
-		autoprefixer = require('gulp-autoprefixer'),
-		minifycss = require('gulp-minify-css'),
-		rename = require('gulp-rename');
+	autoprefixer = require('gulp-autoprefixer'),
+	minifycss = require('gulp-minify-css'),
+	rename = require('gulp-rename');
 
 gulp.task('styles', function() {
 	return gulp.src('sass/*.sass')
