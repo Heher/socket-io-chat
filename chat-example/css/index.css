@@ -17,8 +17,9 @@ body div.container {
   height: 600px;
   margin-top: -300px;
   margin-left: -400px;
-  border: 5px solid #CCC;
+  border: 10px solid #DDD;
   border-radius: 5px;
+  background: #DDD;
 }
 
 div.main-content {
@@ -26,7 +27,8 @@ div.main-content {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  height: 550px;
+  height: 530px;
+  border: 1px solid #000;
 }
 
 form#chat-form {
@@ -35,21 +37,25 @@ form#chat-form {
   display: -webkit-flex;
   display: flex;
   height: 40px;
+  margin-top: 10px;
 }
 form#chat-form input {
   display: block;
-  border: 1px solid #000;
   padding: 10px;
-  width: 90%;
+  width: 700px;
   font-size: 15px;
+  border: 1px solid #000;
+  margin-right: 10px;
 }
 form#chat-form button {
   display: block;
-  width: 10%;
+  width: 70px;
   height: 100%;
-  background: darkblue;
+  background: #6C7B8B;
   color: #FFF;
-  border: none;
+  border: 1px solid #000;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
 #messages {
@@ -60,7 +66,7 @@ form#chat-form button {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background: #FFF;
+  background: #F0FFFF;
 }
 #messages li {
   padding: 5px 10px;
@@ -74,7 +80,8 @@ form#chat-form button {
   -webkit-flex: 1 1;
       -ms-flex: 1 1;
           flex: 1 1;
-  background: lightgrey;
+  background: #FFF;
+  border-right: 1px solid #000;
 }
 #users li {
   list-style-type: none;
@@ -90,6 +97,7 @@ form#chat-form button {
   padding: 20px;
   width: 210px;
   border-radius: 5px;
+  border: 1px solid #000;
   position: absolute;
   top: 100px;
   margin-left: auto;
@@ -100,7 +108,19 @@ form#chat-form button {
 #username-form p {
   text-align: center;
   margin-bottom: 15px;
+  font-size: 15px;
+}
+#username-form input {
+  height: 24px;
+  width: 113px;
+  border: 1px solid #000;
 }
 #username-form button {
-  margin-left: 19px;
+  margin-left: 10px;
+  width: 45px;
+  height: 24px;
+  background: #6C7B8B;
+  color: #FFF;
+  border: 1px solid #000;
+  border-radius: 5px;
 }
