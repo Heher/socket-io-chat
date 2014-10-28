@@ -3,6 +3,7 @@ var socket = io();
 $('#username-form').submit(function() {
 	socket.emit('user connected', $('#username').val());
 	$('#username-form').hide();
+	$('#username-form-overlay').hide();
 	return false;
 });
 
